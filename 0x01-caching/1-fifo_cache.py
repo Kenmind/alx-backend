@@ -12,7 +12,7 @@ class FIFOCache(Base):
     def put(self, key, item):
         """ Updates the cache_data with key and value """
         if key is None or item is None:
-            pass
+            return
         self.cache_data.update({key: item})
         if len(self.cache_data) > self.MAX_ITEMS:
             List = [[i, self.cache_data[i]] for i in self.cache_data]
